@@ -1,0 +1,40 @@
+﻿@model List<Album>
+<section class="latest-albums-area section-padding-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading style-2">
+                    <p>En Yeni Albümleri Keşfedin</p>
+                    <h2>Son Eklenen Albümler</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <div class="ablums-text text-center mb-70">
+                    <p>Müzik, duyguları ifade etmenin, hikayeler anlatmanın ve bağlantı kurmanın evrensel dilidir. Bizim müzik platformumuz, bu güçlü bağlantıyı kuran bir köprüdür. Müzik tutkunları için tasarlanmış olan platformumuzda, en sevdiğiniz sanatçıları keşfedebilir, yeni müzikler keşfetmek için derinlemesine araştırmalar yapabilir ve özelleştirilmiş çalma listeleri oluşturabilirsiniz.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="albums-slideshow owl-carousel">
+
+                    @foreach (var item in Model)
+                    {
+                        <div class="single-album">
+                            <img style="width:200px;height:200px;" src="@item.CoverImage" alt="">
+                            <div class="album-info">
+                                <a href="#">
+                                    <h5>@item.AlbumName</h5>
+                                </a>
+                                <p>@item.AppUser.Name @item.AppUser.Surname</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

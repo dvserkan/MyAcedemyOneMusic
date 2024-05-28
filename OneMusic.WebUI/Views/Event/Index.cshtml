@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- ##### Breadcumb Area Start ##### -->
+    <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(/one-music-gh-pages/img/bg-img/breadcumb3.jpg);">
+        <div class="bradcumbContent">
+            <p>Yenilikleri Görün</p>
+            <h2>Etkinlikler</h2>
+        </div>
+    </section>
+    <!-- ##### Breadcumb Area End ##### -->
+    <!-- ##### Events Area Start ##### -->
+    @await Component.InvokeAsync("_DefaultEventComponent")
+
+    @await Component.InvokeAsync("_DefaultMessageComponent")
+</body>
+
+</html>
+

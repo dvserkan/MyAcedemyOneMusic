@@ -1,0 +1,18 @@
+﻿@model Singer
+@{
+    ViewData["Title"] = "UpdateSinger";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Şarkıcı Güncelleme Sayfası</h3>
+
+<form method="post">
+    <input type="hidden" asp-for="SingerId" />
+    <label>Resim Url</label>
+    <input type="text" class="form-control" asp-for="ImageUrl" />
+    <br>
+    <label>Şarkıcı Adı</label>
+    <input type="text" class="form-control" asp-for="Name" />
+    <br>
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>

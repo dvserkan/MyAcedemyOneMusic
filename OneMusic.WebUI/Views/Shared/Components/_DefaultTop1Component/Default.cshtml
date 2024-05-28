@@ -1,0 +1,35 @@
+﻿@model List<Song>
+<section class="featured-artist-area section-padding-100 bg-img bg-overlay bg-fixed" style="background-image: url(/one-music-gh-pages/img/bg-img/bg-4.jpg);">
+    <div class="container">
+        @foreach (var item in Model)
+        {
+
+
+            <div class="row align-items-end">
+                <div class="col-12 col-md-5 col-lg-4">
+                    <div class="featured-artist-thumb">
+                        <img src="~/images/@item.SongImageUrl" alt="">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7 col-lg-8">
+                    <div class="featured-artist-content">
+                        <!-- Section Heading -->
+                        <div class="section-heading white text-left mb-30">
+                            <p>Öne Çıkan Albüm</p>
+                            <h2>En Çok Dinlenen Şarkı</h2>
+                        </div>
+                        <p>Tarkan'ın 2003 yılında yayımlanan "Dudu" albümü, sanatçının beşinci stüdyo albümüdür. Albüm, Tarkan'ın Türkiye dışındaki ilk büyük projesi olarak dikkat çekmiştir. Albümde beş yeni şarkının yanı sıra, önceki albümlerinden seçilen remixler de bulunmaktadır. "Dudu" albümü, özellikle "Dudu" ve "Gülümse Kaderine" gibi hit şarkılarıyla büyük beğeni toplamış ve geniş bir dinleyici kitlesine ulaşmıştır. Albüm, Tarkan'ın karakteristik pop ve elektronik müzik tarzını başarıyla yansıtmaktadır.</p>
+                        <div class="song-play-area">
+                            <div class="song-name">
+                                <p>01. Ana Hit Şarkı</p>
+                            </div>
+                            <audio preload="auto" controls>
+                                <source src="/audio/@item.SongUrl">
+                            </audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

@@ -1,0 +1,27 @@
+﻿@model List<Song>
+<div class="col-12 col-lg-4">
+    <div class="new-hits-area mb-100">
+        <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+            <p>Yenilikleri Gör</p>
+            <h2>Yeni Hitler</h2>
+        </div>
+        <!-- Single Top Item -->
+        @foreach (var item in Model)
+        {
+            <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="100ms">
+                <div class="first-part d-flex align-items-center">
+                    <div class="thumbnail">
+                        <img style="width:75px; height:75px;" src="/images/@item.SongImageUrl" alt="">
+                    </div>
+                    <div class="content-">
+                        <h6>@item.Album.AlbumName</h6>
+                        <p>@item.Album.AppUser.Name @item.Album.AppUser.Surname</p>
+                    </div>
+                </div>
+                <audio preload="auto" controls>
+                    <source src="/audio/@item.SongUrl">
+                </audio>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,34 @@
+﻿@model List<Event>
+<section class="events-area section-padding-100">
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <!-- Single Event Area -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-event-area mb-30">
+                        <div class="event-thumbnail">
+                            <img src="@item.ImageUrl" alt="">
+                        </div>
+                        <div class="event-text">
+                            <h4>@item.Title</h4>
+                            <div class="event-meta-data">
+                                <a href="#" class="event-place">@item.place</a>
+                                <a href="#" class="event-date">@item.Datetime</a>
+                            </div>
+                            <a href="#" class="btn see-more-btn">Etkinliği Gör</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="load-more-btn text-center mt-70">
+                    <a href="#" class="btn oneMusic-btn">Daha Fazlası İçin <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

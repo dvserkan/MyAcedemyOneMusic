@@ -1,0 +1,51 @@
+﻿@model List<Album>
+<section class="oneMusic-buy-now-area has-fluid bg-gray section-padding-100">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading style-2">
+                    <p>Yeni Çıkanlara Göz Atın</p>
+                    <h2>Yeni Albümler Satın Alın</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                
+          
+            <!-- Single Album Area -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-2">
+                <div class="single-album-area wow fadeInUp" data-wow-delay="100ms">
+                    <div class="album-thumb">
+                        <img style="width:250px;height:220px;" src="@item.CoverImage" alt="">
+                        <!-- Album Price -->
+                        <div class="album-price">
+                            <p>@item.Price.ToString("n2") ₺</p>
+                        </div>
+                        <!-- Play Icon -->
+                        <div class="play-icon">
+                            <a href="#" class="video--play--btn"><span class="icon-play-button"></span></a>
+                        </div>
+                    </div>
+                    <div class="album-info">
+                        <a href="#">
+                            <h5>@item.AlbumName</h5>
+                        </a>
+                        <p>@item.AppUser.Name @item.AppUser.Surname</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="load-more-btn text-center wow fadeInUp" data-wow-delay="300ms">
+                    <a href="#" class="btn oneMusic-btn">Daha Fazlası İçin <i class="fa fa-angle-double-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

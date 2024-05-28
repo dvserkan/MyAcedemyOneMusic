@@ -1,0 +1,29 @@
+﻿@model List<Message>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int sayi = 0;
+}
+
+<table class="table table-bordered table-hover">
+    <tr>
+
+        <th>#</th>
+        <th>İsim - Soyisim</th>
+        <th>E-Mail</th>
+        <th>Konu</th>
+        <th>İçerik</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        sayi++;
+        <tr>
+            <td>@sayi</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@item.Content</td>
+        </tr>
+    }
+</table>
+

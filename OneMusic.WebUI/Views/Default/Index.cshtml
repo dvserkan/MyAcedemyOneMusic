@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+@await Component.InvokeAsync("_DefaultBannerComponent")
+<!-- ##### Hero Area End ##### -->
+<!-- ##### Latest Albums Area Start ##### -->
+@await Component.InvokeAsync("_DefaultAlbumComponent")
+<!-- ##### Latest Albums Area End ##### -->
+<!-- ##### Buy Now Area Start ##### -->
+@await Component.InvokeAsync("_DefaultBuyNowComponent")
+<!-- ##### Buy Now Area End ##### -->
+<!-- ##### Featured Artist Area Start ##### -->
+@await Component.InvokeAsync("_DefaultTop1Component")
+<!-- ##### Featured Artist Area End ##### -->
+<!-- ##### Miscellaneous Area Start ##### -->
+@await Component.InvokeAsync("_DefaultMiscellaneousComponent")
+<!-- ##### Miscellaneous Area End ##### -->
+<!-- ##### Contact Area Start ##### -->
+@await Component.InvokeAsync("_DefaultMessageComponent")
